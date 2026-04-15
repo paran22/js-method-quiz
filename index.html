@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS 핵심 정리 퀴즈</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>JavaScript 핵심 정리 퀴즈</h1>
+    <p class="subtitle">코드잇 풀스택 13기 · 2026.04.15 멘토링</p>
+    <nav class="category-nav">
+      <button class="category-btn active" data-category="all">전체</button>
+      <button class="category-btn" data-category="string">문자열</button>
+      <button class="category-btn" data-category="array">배열</button>
+      <button class="category-btn" data-category="hof">map/filter/reduce</button>
+      <button class="category-btn" data-category="convert">변환</button>
+      <button class="category-btn" data-category="destructuring">구조 분해</button>
+      <button class="category-btn" data-category="spread">Spread/Rest</button>
+      <button class="category-btn" data-category="modern">?.  ??</button>
+      <button class="category-btn" data-category="final">종합</button>
+    </nav>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+      <span class="progress-text" id="progressText">0 / 0 완료</span>
+    </div>
+  </header>
+
+  <section class="intro-card">
+    <span class="intro-label">시작하기 전에</span>
+    <h2>함수 vs 메서드</h2>
+    <p>오늘 "메서드"라는 말이 많이 나옵니다. 둘의 차이가 뭘까요?</p>
+    <div class="code-block"><code>// (A)
+console.log('hello');
+alert('안녕');
+
+// (B)
+'hello'.toUpperCase();
+[1, 2, 3].push(4);
+document.querySelector('h1');</code></div>
+    <button class="reveal-intro-btn" id="revealIntroBtn">정답 보기</button>
+    <div class="intro-answer" id="introAnswer">
+      <p><strong>(A)는 함수</strong> — 독립적으로 호출</p>
+      <p><strong>(B)는 메서드</strong> — 객체에 <strong>점(.)을 찍고</strong> 호출</p>
+      <p class="intro-summary">함수 중에서 <strong>어떤 대상(객체)에 속해 있는 함수</strong>를 메서드라고 부릅니다.<br>아래 퀴즈에서 빈칸에 들어갈 메서드를 직접 타이핑하고 실행해보세요!</p>
+    </div>
+  </section>
+
+  <main id="quizContainer"></main>
+
+  <footer>
+    <button class="reset-btn" id="resetBtn">전체 초기화</button>
+  </footer>
+
+  <script src="quiz-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
